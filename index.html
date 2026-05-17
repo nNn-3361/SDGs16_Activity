@@ -1,0 +1,173 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Before the Verdict</title>
+    <link rel="preload" href="assets/scenes/hallway.png?v=3" as="image" />
+    <link rel="preload" href="assets/scenes/group-chat.png?v=3" as="image" />
+    <link rel="preload" href="assets/scenes/investigation.png?v=3" as="image" />
+    <link rel="preload" href="assets/scenes/courthouse.png?v=3" as="image" />
+    <link rel="preload" href="assets/scenes/classroom.png?v=3" as="image" />
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <main class="game-shell" aria-live="polite">
+      <section class="intro-screen" id="introScreen">
+        <div class="intro-scene" aria-hidden="true">
+          <div class="pixel-sky"></div>
+          <div class="pixel-building"></div>
+          <div class="pixel-windows"></div>
+          <div class="pixel-ground"></div>
+        </div>
+        <div class="intro-copy">
+          <p class="eyebrow">SDG 16.3 Classroom Decision Game</p>
+          <h1>Before the Verdict</h1>
+          <p>
+            Rule of law is not revenge. Justice needs procedure, evidence,
+            proportionality, and equal access for everyone.
+          </p>
+          <dl class="case-meta" aria-label="Case file summary">
+            <div>
+              <dt>File Type</dt>
+              <dd>Anonymous Classroom Simulation</dd>
+            </div>
+            <div>
+              <dt>Focus</dt>
+              <dd>Rule of Law / Access to Justice</dd>
+            </div>
+            <div>
+              <dt>Mode</dt>
+              <dd>Group Decision Record</dd>
+            </div>
+          </dl>
+          <button class="primary-action" id="startButton" type="button">
+            Start Classroom Game
+          </button>
+        </div>
+      </section>
+
+      <section class="game-screen is-hidden" id="gameScreen">
+        <header class="topbar">
+          <div>
+            <p class="eyebrow" id="sceneKicker">Scene 1 of 5</p>
+            <h2 id="sceneTitle">The Hallway</h2>
+            <p class="section-label" id="sectionLabel">Incident Report</p>
+          </div>
+          <button class="ghost-action" id="restartButton" type="button">
+            Restart
+          </button>
+        </header>
+
+        <section class="stage hallway" id="stage" aria-label="Pixel scene">
+          <div class="case-ribbon" id="scenePhase">Incident Report</div>
+          <div class="scene-layer scene-layer-a"></div>
+          <div class="scene-layer scene-layer-b"></div>
+          <div class="scene-layer scene-layer-c"></div>
+          <div class="character" id="characterSprite" aria-hidden="true">
+            <span class="character-head"></span>
+            <span class="character-body"></span>
+          </div>
+        </section>
+
+        <section class="dialogue-panel">
+          <div class="speaker-row">
+            <span class="speaker" id="speakerName">Bystander</span>
+            <span class="discussion-chip" id="modeChip">Group Discussion</span>
+          </div>
+          <p id="sceneText"></p>
+        </section>
+
+        <section class="decision-header" aria-label="Decision record header">
+          <div>
+            <p class="eyebrow">Class Decision Record</p>
+            <h3>Choose the action your group would defend.</h3>
+          </div>
+          <span>Pending Vote</span>
+        </section>
+
+        <section class="choices" id="choices" aria-label="Choices"></section>
+
+        <section class="result-panel is-hidden" id="resultPanel">
+          <p class="result-label">Consequence Logged</p>
+          <p id="resultText"></p>
+          <p class="reflection" id="reflectionText"></p>
+          <button class="primary-action" id="continueButton" type="button">
+            Continue
+          </button>
+        </section>
+
+        <aside class="meters" aria-label="Status meters">
+          <div class="meter-card">
+            <div class="meter-heading">
+              <span>Due Process</span>
+              <strong id="dueProcessValue">50</strong>
+            </div>
+            <div class="meter-track">
+              <span id="dueProcessBar"></span>
+            </div>
+          </div>
+          <div class="meter-card">
+            <div class="meter-heading">
+              <span>Access to Justice</span>
+              <strong id="accessValue">50</strong>
+            </div>
+            <div class="meter-track">
+              <span id="accessBar"></span>
+            </div>
+          </div>
+          <div class="meter-card">
+            <div class="meter-heading">
+              <span>Public Trust</span>
+              <strong id="trustValue">50</strong>
+            </div>
+            <div class="meter-track">
+              <span id="trustBar"></span>
+            </div>
+          </div>
+          <div class="meter-card warning-meter">
+            <div class="meter-heading">
+              <span>Emotional Pressure</span>
+              <strong id="pressureValue">35</strong>
+            </div>
+            <div class="meter-track">
+              <span id="pressureBar"></span>
+            </div>
+          </div>
+        </aside>
+      </section>
+
+      <section class="ending-screen is-hidden" id="endingScreen">
+        <div class="ending-card">
+          <p class="eyebrow">Class Justice Report</p>
+          <h2 id="endingTitle"></h2>
+          <p id="endingSummary"></p>
+          <p class="sdg-note">
+            SDG 16.3 connects this result to rule of law and equal access to
+            justice for all.
+          </p>
+          <div class="ending-grid" id="endingMeters"></div>
+          <section class="learning-section" aria-labelledby="learningTitle">
+            <h3 id="learningTitle">What this playthrough teaches</h3>
+            <div class="learning-grid" id="learningCards"></div>
+          </section>
+          <section class="discussion-prompt" aria-labelledby="discussionTitle">
+            <h3 id="discussionTitle">Discussion question</h3>
+            <p id="discussionPrompt"></p>
+          </section>
+          <blockquote id="closingQuote">
+            A fair system must be strong enough to respond to harm and careful
+            enough to protect the law.
+          </blockquote>
+          <div class="ending-actions">
+            <button class="primary-action" id="playAgainButton" type="button">
+              Play Again
+            </button>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <script src="script.js"></script>
+  </body>
+</html>
