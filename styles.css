@@ -454,6 +454,22 @@ h2 {
   margin-bottom: 12px;
 }
 
+.dialogue-actions {
+  display: flex;
+  justify-content: space-between;
+  gap: 14px;
+  align-items: center;
+  margin-top: 16px;
+}
+
+.dialogue-actions span {
+  color: var(--muted);
+  font-size: 0.82rem;
+  font-weight: 900;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+}
+
 .speaker,
 .discussion-chip,
 .result-label {
@@ -563,6 +579,11 @@ h2 {
   color: var(--muted);
   font-size: 0.92rem;
   font-weight: 800;
+}
+
+.meter-heading span {
+  min-width: 0;
+  line-height: 1.15;
 }
 
 .meter-heading strong {
@@ -739,6 +760,7 @@ blockquote {
   }
 
   .speaker-row,
+  .dialogue-actions,
   .topbar {
     flex-direction: column;
   }
@@ -1038,6 +1060,14 @@ blockquote {
     padding: 16px;
   }
 
+  .dialogue-actions {
+    align-items: stretch;
+  }
+
+  .dialogue-actions .ghost-action {
+    width: 100%;
+  }
+
   .choices,
   .meters,
   .ending-grid,
@@ -1161,6 +1191,22 @@ body {
 
 .game-screen[data-section="procedure"] {
   --case-accent: #6bc5d2;
+}
+
+.game-screen[data-section="risk"] {
+  --case-accent: #d7c46a;
+}
+
+.game-screen[data-section="support"] {
+  --case-accent: #7bc17d;
+}
+
+.game-screen[data-section="witness"] {
+  --case-accent: #f0bc5e;
+}
+
+.game-screen[data-section="family"] {
+  --case-accent: #d98d61;
 }
 
 .game-screen[data-section="court"] {

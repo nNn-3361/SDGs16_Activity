@@ -34,7 +34,7 @@
             </div>
             <div>
               <dt>Focus</dt>
-              <dd>Rule of Law / Access to Justice</dd>
+              <dd>Rule of Law / Risk Management / Access to Justice</dd>
             </div>
             <div>
               <dt>Mode</dt>
@@ -76,9 +76,19 @@
             <span class="discussion-chip" id="modeChip">Group Discussion</span>
           </div>
           <p id="sceneText"></p>
+          <div class="dialogue-actions">
+            <span id="dialogueProgress">Line 1 of 1</span>
+            <button class="ghost-action" id="nextDialogueButton" type="button">
+              Next
+            </button>
+          </div>
         </section>
 
-        <section class="decision-header" aria-label="Decision record header">
+        <section
+          class="decision-header is-hidden"
+          id="decisionHeader"
+          aria-label="Decision record header"
+        >
           <div>
             <p class="eyebrow">Class Decision Record</p>
             <h3>Choose the action your group would defend.</h3>
@@ -118,7 +128,7 @@
           </div>
           <div class="meter-card">
             <div class="meter-heading">
-              <span>Public Trust</span>
+              <span>Institutional Accountability</span>
               <strong id="trustValue">50</strong>
             </div>
             <div class="meter-track">
