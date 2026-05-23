@@ -531,6 +531,15 @@ h2 {
   text-transform: uppercase;
 }
 
+.choice-button small {
+  display: block;
+  margin-top: 10px;
+  color: var(--muted);
+  font-size: clamp(0.76rem, 0.74rem + 0.08vw, 0.84rem);
+  font-weight: 700;
+  line-height: 1.38;
+}
+
 .choice-button:focus-visible,
 .primary-action:focus-visible,
 .ghost-action:focus-visible {
@@ -1365,6 +1374,10 @@ body {
 
 .choice-button span {
   color: var(--case-accent);
+}
+
+.choice-button small {
+  color: rgba(216, 210, 195, 0.72);
 }
 
 .result-panel {

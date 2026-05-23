@@ -23,7 +23,8 @@ const scenes = [
     ],
     choices: [
       {
-        label: "Record and post it before adults arrive.",
+        label: "Prioritize immediate evidence by recording what happens.",
+        note: "This may preserve facts, but sharing the clip publicly can turn the incident into pressure before support arrives.",
         result:
           "The video spreads quickly. More students gather, but no one has slowed the conflict down. The situation becomes a spectacle before it becomes a report.",
         reflection:
@@ -31,7 +32,8 @@ const scenes = [
         effects: { dueProcess: -8, access: -6, trust: -8, pressure: 18 },
       },
       {
-        label: "Ask a teacher and counselor to step in now.",
+        label: "Prioritize early adult intervention and a safe report.",
+        note: "This may feel slower than acting directly, but it creates a route for separation, records, and support.",
         result:
           "An adult separates the students and records what happened. The conflict is not solved yet, but there is now a clear path for help and accountability.",
         reflection:
@@ -39,7 +41,8 @@ const scenes = [
         effects: { dueProcess: 12, access: 14, trust: 10, pressure: -8 },
       },
       {
-        label: "Join the argument because one side seems wrong.",
+        label: "Prioritize standing beside the student who seems threatened.",
+        note: "This can feel protective in the moment, but joining the crowd may make the conflict harder to calm.",
         result:
           "The crowd gets louder. Everyone thinks they are defending fairness, but the pressure makes it harder for anyone to step back safely.",
         reflection:
@@ -72,7 +75,8 @@ const scenes = [
     ],
     choices: [
       {
-        label: "Keep the student in class so the rumor does not grow.",
+        label: "Prioritize classroom stability while the rumor is still unclear.",
+        note: "This keeps the room calm, but it may leave an affected student without a private path to help.",
         result:
           "The room looks normal, but the affected student has no real support. Other students learn that quiet is valued more than safety.",
         reflection:
@@ -80,7 +84,8 @@ const scenes = [
         effects: { dueProcess: -4, access: -15, trust: -12, pressure: 5 },
       },
       {
-        label: "Let the counselor meet privately with the student now.",
+        label: "Prioritize private support with the counselor now.",
+        note: "This protects privacy while giving the school a formal way to document what happened.",
         result:
           "The class does not get all the details, but the student gets a safer route to help. The school can still document what happened through proper channels.",
         reflection:
@@ -88,7 +93,8 @@ const scenes = [
         effects: { dueProcess: 8, access: 16, trust: 12, pressure: -9 },
       },
       {
-        label: "Ask the student to explain everything to the class.",
+        label: "Prioritize open explanation so classmates stop guessing.",
+        note: "This may reduce rumors for some students, but it asks the affected student to speak before they are ready.",
         result:
           "Some classmates call it transparency, but the student is put under pressure before they have chosen what to share or report.",
         reflection:
@@ -121,7 +127,8 @@ const scenes = [
     ],
     choices: [
       {
-        label: "Forward the claims so everyone knows who to blame.",
+        label: "Share screenshots to warn classmates quickly.",
+        note: "This may feel protective, but screenshots can mix evidence, rumor, and private details in the same message.",
         result:
           "The chat explodes. Some students feel powerful for naming people, but private information spreads faster than verified facts.",
         reflection:
@@ -129,7 +136,8 @@ const scenes = [
         effects: { dueProcess: -14, access: -8, trust: -10, pressure: 20 },
       },
       {
-        label: "Ask the group not to dox or spread unverified details.",
+        label: "Prioritize privacy and evidence by slowing the chat down.",
+        note: "This may frustrate people who want quick answers, but it keeps facts separate from accusations.",
         result:
           "A few students push back, but the chat slows down. People begin separating what is known from what is guessed.",
         reflection:
@@ -137,7 +145,8 @@ const scenes = [
         effects: { dueProcess: 13, access: 6, trust: 9, pressure: -12 },
       },
       {
-        label: "Share reporting and counseling resources instead.",
+        label: "Prioritize access to help by sharing official resources.",
+        note: "This does not answer every accusation, but it gives unsafe students a practical next step.",
         result:
           "Students who feel unsafe know where to go. The conversation shifts from punishment alone to support, reporting, and safety.",
         reflection:
@@ -153,7 +162,7 @@ const scenes = [
     speaker: "Witness",
     sceneClass: "investigation",
     artClass: "art-investigation",
-    text: "Several students saw parts of the incident, but their accounts do not match perfectly. Some are afraid of being blamed by friends.",
+    text: "Several students saw parts of the incident, but their accounts do not match perfectly. Some are afraid of being judged by friends.",
     dialogue: [
       {
         speaker: "Witness",
@@ -170,7 +179,8 @@ const scenes = [
     ],
     choices: [
       {
-        label: "Let witnesses submit private statements through staff.",
+        label: "Prioritize protected witness statements through staff.",
+        note: "This encourages more students to speak, though the process may feel less visible to classmates.",
         result:
           "Students are more willing to report. The school can compare accounts, protect names where appropriate, and keep a clearer record.",
         reflection:
@@ -178,7 +188,8 @@ const scenes = [
         effects: { dueProcess: 14, access: 12, trust: 12, pressure: -8 },
       },
       {
-        label: "Pressure witnesses to identify themselves in the chat.",
+        label: "Prioritize public accountability from witnesses.",
+        note: "This can make testimony feel transparent, but it may expose witnesses to retaliation or peer pressure.",
         result:
           "Some students speak loudly, but others go silent. The record becomes shaped by who can handle public pressure.",
         reflection:
@@ -186,7 +197,8 @@ const scenes = [
         effects: { dueProcess: -12, access: -9, trust: -10, pressure: 14 },
       },
       {
-        label: "Ignore witness differences and follow the first story.",
+        label: "Prioritize the clearest first account to avoid delay.",
+        note: "This gives the class a simple story, but early accounts can miss context or later corrections.",
         result:
           "The class gets a simple story, but the investigation loses details that could protect both affected students and accused students.",
         reflection:
@@ -219,7 +231,8 @@ const scenes = [
     ],
     choices: [
       {
-        label: "Demand the harshest result immediately.",
+        label: "Prioritize a strong immediate sanction.",
+        note: "This may reassure frightened students, but it can skip evidence, defense, and support planning.",
         result:
           "The demand sounds decisive, but it skips evidence, defense, assessment, and the needs of affected students. People may feel heard, yet the process becomes fragile.",
         reflection:
@@ -227,7 +240,8 @@ const scenes = [
         effects: { dueProcess: -16, access: -4, trust: -7, pressure: 15 },
       },
       {
-        label: "Keep everything quiet to protect the school's image.",
+        label: "Limit public updates until facts are checked.",
+        note: "This reduces the risk of wrong information, but silence can make students feel ignored or unsafe.",
         result:
           "The hallway becomes calm, but students feel ignored. Silence protects reputation more than people, and trust drops.",
         reflection:
@@ -235,7 +249,8 @@ const scenes = [
         effects: { dueProcess: -8, access: -14, trust: -18, pressure: 4 },
       },
       {
-        label: "Investigate carefully and support affected students.",
+        label: "Prioritize careful investigation with affected-student support.",
+        note: "This takes more time, but it combines evidence, safety planning, and access to help.",
         result:
           "The response is slower than anger wants, but statements, evidence, safety plans, and counseling are handled through clear channels.",
         reflection:
@@ -268,7 +283,8 @@ const scenes = [
     ],
     choices: [
       {
-        label: "Ignore the past record because everyone deserves a fresh start.",
+        label: "Prioritize a fresh start without public labeling.",
+        note: "This protects reintegration, but it needs safeguards so other students are not left carrying unknown risk.",
         result:
           "The decision protects the student's chance to return, but no one checks whether the environment is safe. Other students are asked to trust a system that has not explained its safeguards.",
         reflection:
@@ -276,7 +292,8 @@ const scenes = [
         effects: { dueProcess: 3, access: -10, trust: -16, pressure: 5 },
       },
       {
-        label: "Publish the student's past record so everyone can avoid them.",
+        label: "Share risk information with families quickly.",
+        note: "This may feel like immediate protection, but personal records can spread beyond context and due process.",
         result:
           "Some students feel safer for a moment, but the file spreads beyond context. Privacy, rehabilitation, and fair procedure are damaged by public exposure.",
         reflection:
@@ -284,7 +301,8 @@ const scenes = [
         effects: { dueProcess: -14, access: -4, trust: -9, pressure: 16 },
       },
       {
-        label: "Require a confidential risk plan with school safety measures and review.",
+        label: "Require confidential risk review and school safety planning.",
+        note: "This keeps private records controlled while making safety, supervision, and follow-up institutional duties.",
         result:
           "The school does not reveal private records, but it sets supervision, contact points, protection steps, and scheduled review. Safety becomes an institutional duty, not a rumor.",
         reflection:
@@ -313,7 +331,8 @@ const scenes = [
     ],
     choices: [
       {
-        label: "Share a process update and support contacts with families.",
+        label: "Prioritize process updates and support contacts for families.",
+        note: "This does not reveal every detail, but it tells families what help and safeguards exist.",
         result:
           "Families do not receive every detail, but they know what has been done, where to report concerns, and how affected students can get help.",
         reflection:
@@ -321,7 +340,8 @@ const scenes = [
         effects: { dueProcess: 12, access: 14, trust: 15, pressure: -9 },
       },
       {
-        label: "Release names so parents feel the school is decisive.",
+        label: "Prioritize clear identification so families know who is involved.",
+        note: "This may reduce uncertainty for some parents, but it can expose minors and witnesses before the record is complete.",
         result:
           "The update spreads fast. Some parents feel reassured, but minors and witnesses are exposed before the record is complete.",
         reflection:
@@ -329,7 +349,8 @@ const scenes = [
         effects: { dueProcess: -14, access: -5, trust: -12, pressure: 15 },
       },
       {
-        label: "Say nothing until every investigation step is finished.",
+        label: "Prioritize confidentiality until every investigation step is finished.",
+        note: "This avoids premature claims, but families may not know how to report concerns or get support.",
         result:
           "The school avoids mistakes, but the silence leaves families guessing and students unsure how to seek help.",
         reflection:
@@ -366,7 +387,8 @@ const scenes = [
     ],
     choices: [
       {
-        label: "Say justice means the maximum punishment possible.",
+        label: "Prioritize the strongest lawful punishment.",
+        note: "This centers the seriousness of harm, but sentencing still has to consider law, age, evidence, and proportionality.",
         result:
           "The answer recognizes how serious the harm is, but it risks treating proportionality and youth justice as obstacles instead of legal duties.",
         reflection:
@@ -374,7 +396,8 @@ const scenes = [
         effects: { dueProcess: -10, access: 3, trust: -6, pressure: 14 },
       },
       {
-        label: "Say rehabilitation is the only thing that matters.",
+        label: "Prioritize rehabilitation and future reintegration.",
+        note: "This recognizes that young people can change, but victims and classmates still need safety and accountability.",
         result:
           "The answer protects the idea that young people can change, but it makes victims and ordinary students feel that risk and accountability have disappeared.",
         reflection:
@@ -382,7 +405,8 @@ const scenes = [
         effects: { dueProcess: 4, access: -11, trust: -14, pressure: 4 },
       },
       {
-        label: "Balance sentence, risk assessment, victim support, and post-release review.",
+        label: "Balance sentencing, risk review, victim support, and follow-up.",
+        note: "This is harder to explain quickly, but it keeps punishment, safety, rights, and support in one process.",
         result:
           "The discussion becomes harder, but more complete. The system must judge responsibility, support victims, reduce future risk, and review what happens after custody or supervision.",
         reflection:
@@ -411,7 +435,8 @@ const scenes = [
     ],
     choices: [
       {
-        label: "Create a class protocol for reporting and support.",
+        label: "Prioritize a class protocol for reporting and support.",
+        note: "This turns the lesson into practical steps, though it requires students to trust official channels.",
         result:
           "The class turns the case into a practical plan: who to contact, how to preserve information, and how to protect affected students.",
         reflection:
@@ -419,7 +444,8 @@ const scenes = [
         effects: { dueProcess: 9, access: 16, trust: 14, pressure: -10 },
       },
       {
-        label: "Focus only on warning students not to get involved.",
+        label: "Prioritize personal safety by telling students to keep distance.",
+        note: "This can reduce escalation, but it may also discourage responsible reporting or bystander help.",
         result:
           "The message reduces some risk, but it also teaches students to step back when someone may need help.",
         reflection:
@@ -427,7 +453,8 @@ const scenes = [
         effects: { dueProcess: 3, access: -10, trust: -8, pressure: -3 },
       },
       {
-        label: "Promise to expose future incidents immediately online.",
+        label: "Use public attention when official channels seem slow.",
+        note: "This can pressure institutions to respond, but it may repeat the risks of rumor, privacy harm, and online punishment.",
         result:
           "The class sounds determined, but the plan repeats the same risk: public pressure before evidence, privacy, and support.",
         reflection:
@@ -456,7 +483,8 @@ const scenes = [
     ],
     choices: [
       {
-        label: "We will not spread unverified personal information.",
+        label: "We will prioritize restraint with unverified personal information.",
+        note: "This protects facts and privacy, while still allowing official reports and support-seeking.",
         result:
           "The class chooses restraint. It does not erase anger, but it protects minors, witnesses, victims, and the integrity of future proceedings.",
         reflection:
@@ -464,7 +492,8 @@ const scenes = [
         effects: { dueProcess: 12, access: 4, trust: 8, pressure: -14 },
       },
       {
-        label: "We will know where to report violence and ask for help.",
+        label: "We will prioritize knowing where to report violence and ask for help.",
+        note: "This makes access practical before the next crisis, not only after harm has already spread.",
         result:
           "The class chooses access. Students leave with a practical route to adults, counselors, and official channels before harm grows.",
         reflection:
@@ -472,7 +501,8 @@ const scenes = [
         effects: { dueProcess: 7, access: 16, trust: 12, pressure: -10 },
       },
       {
-        label: "We will support victims while respecting due process.",
+        label: "We will prioritize victim support while respecting due process.",
+        note: "This asks the class to hold care, evidence, rights, and accountability together.",
         result:
           "The class chooses a difficult balance. It makes room for grief, safety, evidence, rights, and accountability without turning the crowd into the court.",
         reflection:
@@ -639,9 +669,20 @@ function renderScene() {
 
   scene.choices.forEach((choice, index) => {
     const button = document.createElement("button");
+    const choiceNumber = document.createElement("span");
+    const choiceLabel = document.createTextNode(choice.label);
+
     button.className = "choice-button";
     button.type = "button";
-    button.innerHTML = `<span>Choice ${index + 1}</span>${choice.label}`;
+    choiceNumber.textContent = `Choice ${index + 1}`;
+    button.append(choiceNumber, choiceLabel);
+
+    if (choice.note) {
+      const note = document.createElement("small");
+      note.textContent = choice.note;
+      button.append(note);
+    }
+
     button.addEventListener("click", () => selectChoice(choice, index));
     choices.append(button);
   });
@@ -730,7 +771,7 @@ function getEnding() {
         },
       ],
       prompt:
-        "Which part of the process would be hardest to defend in public: protecting rights, waiting for evidence, managing risk confidentially, or avoiding online blame?",
+        "Which part of the process would be hardest to defend in public: protecting rights, waiting for evidence, managing risk confidentially, or avoiding online accusations?",
     };
   }
 
